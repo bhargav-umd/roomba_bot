@@ -2,7 +2,7 @@
 #include <sensor_msgs/LaserScan.h>
 #include <sstream>
 #include <string>
-#include "robot.hpp"
+#include "../include/robot.hpp"
 #include "ros/ros.h"
 
 int main(int argc, char **argv) {
@@ -18,6 +18,12 @@ int main(int argc, char **argv) {
     ros::Subscriber sub =
         n.subscribe("/scan", 1000, &robot::scanCallback, &roomba);
 
-    ros::spin();
+    while (ros::ok()) {
+        roomba.obstacle(roomba.lasers);
+        ros::SpinOnce;
+
+        loop_rate.sleep();
+    }
+
     return 0;
 }
