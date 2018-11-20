@@ -22,12 +22,11 @@ bool robot::obstacle(std::vector<double> laserscans) {
             min = laserscans[i];
         }
     }
+    std::cout << "Min value is: " << min << std::endl;
 
     if (min < 0.5) {
-        std::cout << "Obstacle seen" << std::endl;
         return true;
     } else {
-        std::cout << "No obstacles around, move ahead" << std::endl;
         return false;
     }
 }
