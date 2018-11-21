@@ -12,9 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 #declare catkin package
 catkin_package()
 
-include_directories(
-include
-  ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(walker src/walker.cpp
                       src/robot.cpp)
