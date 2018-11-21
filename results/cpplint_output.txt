@@ -1,0 +1,7 @@
+Bob:#cpplint src/robot.cpp 
+Done processing src/robot.cpp
+Bob:#cpplint src/walker.cpp 
+Done processing src/walker.cpp
+Bob:#cpplint include/robot.hpp 
+Done processing include/robot.hpp
+
