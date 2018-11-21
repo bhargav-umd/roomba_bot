@@ -79,7 +79,7 @@ The bag file inside the results folder was compressed due to size issues, to run
 (Git only accepts 100MB files)
 ```
 cd ~/ros_ws/src/roomba_turtlebot/results
-rosbag decompress -f roomba_bag.bag
+rosbag decompress -f roomba_bagfile.bag
 rosbag play roomba_bagfile.bag
 ```
 
