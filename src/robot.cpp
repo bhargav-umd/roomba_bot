@@ -8,23 +8,21 @@
 
 void robot::scanCallback(const sensor_msgs::LaserScan::ConstPtr& laser) {
     robot::lasers.clear();
-
     for (int i = 0; i < laser->ranges.size(); i++) {
-        std::cout << laser->ranges[i] << std::endl;
+        // std::cout << laser->ranges[i] << std::endl;
         robot::lasers.push_back(laser->ranges[i]);
     }
 }
 
 bool robot::obstacle(std::vector<double> laserscans) {
-    double min = 60.0;
+    double min = 65.0;
     for (int i = 0; i < laserscans.size(); i++) {
         if (laserscans[i] < min) {
             min = laserscans[i];
         }
     }
-    std::cout << "Min value is: " << min << std::endl;
-
-    if (min < 0.5) {
+    std::cout << "Min: " << min << std::endl;
+    if (min < 0.65) {
         return true;
     } else {
         return false;
