@@ -28,7 +28,7 @@
  * @version 1
  * @date 2018-11-20
  */
-#include <geometry_msgs/Twists.h>
+#include <geometry_msgs/Twist.h>
 #include <ros/console.h>
 #include <sensor_msgs/LaserScan.h>
 #include <sstream>
