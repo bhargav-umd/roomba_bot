@@ -33,9 +33,21 @@ cd ..
 catkin_make
 ```
 
-## How to run
+# How to run
 
-* To run the package, just run the next two commands:
+* To run teleoperation, just run the next three commands:
+```
+cd ~/ros_ws
+source devel/setup.bash
+roslaunch roomba_bot roomba.launch
+```
+You can control the robot using:
+ ```l``` for turning left 
+```r``` for turning right
+and ```+``` for moving forward
+
+
+* To wander the robot automatically, just run the next two commands:
 
 ```
 cd ~/ros_ws
