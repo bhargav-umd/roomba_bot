@@ -16,5 +16,10 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(walker src/walker.cpp
                       src/robot.cpp)
+
+add_executable(teleop src/teleop.cpp)                 
 target_link_libraries(walker ${catkin_LIBRARIES})
+
+target_link_libraries(teleop ${catkin_LIBRARIES})
+
 
